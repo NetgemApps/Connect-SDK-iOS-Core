@@ -131,7 +131,7 @@
             [sself resumeDiscovery];
         };
 
-        [self startSSIDTimer];
+//        [self startSSIDTimer];
     }
     
     return self;
@@ -242,11 +242,11 @@
 
 #pragma mark - Wireless SSID Change Detection
 
-- (void) startSSIDTimer
-{
-    _ssidTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(detectSSIDChange) userInfo:nil repeats:YES];
-    [_ssidTimer fire];
-}
+//- (void) startSSIDTimer
+//{
+//    _ssidTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(detectSSIDChange) userInfo:nil repeats:YES];
+//    [_ssidTimer fire];
+//}
 
 - (void) stopSSIDTimer
 {
@@ -501,7 +501,7 @@
 /// Resumes all discovery providers and the SSID change timer.
 - (void)resumeDiscovery {
     // moved from -hAppDidBecomeActive:
-    [self startSSIDTimer];
+//    [self startSSIDTimer];
 
     if (_shouldResumeSearch)
     {
